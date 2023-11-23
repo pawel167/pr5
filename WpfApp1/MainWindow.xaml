@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Button Margin="16" Height="22" Content="Задание 1" Name="FirstPage" Click="FirstPage_Click"/>
+            <Button Margin="16" Height="22" Content="Задание 2" Name="SecondPage" Click="SecondPage_Click"/>
+            <Button Margin="16" Height="22" Content="Задание 3" Name="ThreePage" Click="ThreePage_Click"/>
+            <Button Margin="16" Height="22" Content="Задание 4" Name="FourPage" Click="FourPage_Click"/>
+            <Button Margin="16" Height="22" Content="Задание 5" Name="FivePage" Click="FivePage_Click"/>
+        </StackPanel>
+
+        <Frame Grid.Column="1" Name="MyFrame" NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+</Window>
