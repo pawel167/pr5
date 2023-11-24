@@ -35,22 +35,20 @@ namespace WpfApp1
             if (!double.TryParse(textbox2.Text, out double z))
             {
                 MessageBox.Show("Поле B только число!");
-            }           
+            }
             if (z > y)
             {
-                if (z > y)
-                {
-                    y = z;
-                }
-                else
-                {
-                    z = y;
-                }
+                y = z;
             }
             else
+                if (y > z)
             {
-                z = 0;
-                y = 0;
+                z = y;
+            }           
+            else
+            {
+              z = 0;
+              y = 0;
             }
             answer.Text += $"новые значения z = {z}, y = {y}";
         }

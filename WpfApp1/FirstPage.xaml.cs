@@ -32,16 +32,17 @@ namespace WpfApp1
                 MessageBox.Show("Введите число!");
             }
             int y, z;
-            y = x / 100;
+            y = x / 100 % 10;
             z = x % 100 / 10;
             if (z > y)
             {
                 answer.Text += "больше вторая цифра";
             }
             else
+            if (z < y)
             {
                 answer.Text += "больше первая цифра";
-            }
+            }           
         }
     }
 }
