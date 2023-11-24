@@ -32,19 +32,19 @@ namespace WpfApp1
             {
                 MessageBox.Show("Поле А только число!");
             }
-            if (!int.TryParse(textbox1.Text, out int y))
+            if (!int.TryParse(textbox2.Text, out int y))
             {
                 MessageBox.Show("Поле А только число!");
-            }
+            }           
             if (y < -Math.Abs(x) && y > -100)
             {
                 answer.Text += "да";
             }
-            if (y == -Math.Abs(x) && y == -100)
+            if (y == -Math.Abs(x) || y == -100)
             {
                 answer.Text += "на границе";
             }
-            else
+            if (y > -Math.Abs(x) || y < -100)
             {
                 answer.Text += "нет";
             }
